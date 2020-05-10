@@ -18,3 +18,16 @@ function findItemInArray(value, list) {
 
   return result;
 }
+
+function findItemInArrayByKey(value, key, list) {
+  var index = list.map(function(item) {
+    return item[key];
+  }).indexOf(value);
+
+  var result = null;
+  if (index !== -1) {
+    result = list[index];
+  }
+
+  return result;
+}
