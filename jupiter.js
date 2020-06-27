@@ -31,3 +31,15 @@ function findItemInArrayByKey(value, key, list) {
 
   return result;
 }
+
+function areObjectsEqual(obj1, obj2) {
+  var result = null;
+  
+  if (JSON.stringify(obj1) === JSON.stringify(obj2)) {
+    result = true;
+  } else {
+    result = false;
+  }
+
+  return result;
+}
