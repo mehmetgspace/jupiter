@@ -1,3 +1,4 @@
+// isNullOrEmpty
 function isNullOrEmpty(value) {
   var status = false;
   if (value === null || value === '') {
@@ -6,6 +7,7 @@ function isNullOrEmpty(value) {
   return status;
 }
 
+// findItemInArray
 function findItemInArray(value, list) {
   var index = list.map(function(item) {
     return item;
@@ -19,6 +21,7 @@ function findItemInArray(value, list) {
   return result;
 }
 
+// findItemInArrayByKey
 function findItemInArrayByKey(value, key, list) {
   var index = list.map(function(item) {
     return item[key];
@@ -32,9 +35,10 @@ function findItemInArrayByKey(value, key, list) {
   return result;
 }
 
+// areObjectsEqual
 function areObjectsEqual(obj1, obj2) {
   var result = null;
-  
+
   if (JSON.stringify(obj1) === JSON.stringify(obj2)) {
     result = true;
   } else {
