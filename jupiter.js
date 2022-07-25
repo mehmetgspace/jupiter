@@ -47,3 +47,17 @@ function areObjectsEqual(obj1, obj2) {
 
   return result;
 }
+
+// removeItemFromArray
+function removeItemFromArray(userItem, list) {
+  let result = [];
+  if (typeof list !== 'undefined') {
+    if (Array.isArray(list)) {
+      result = list;
+      if (result.length > 0) {
+        result = list.filter(listItem => listItem !== userItem);
+      }
+    }
+  }
+  return result;
+}
