@@ -61,3 +61,20 @@ function removeItemFromArray(userItem, list) {
   }
   return result;
 }
+
+// removeItemFromArrayByKey
+function removeItemFromArrayByKey(value, key, list) {
+  let result = [];
+  if (typeof list !== 'undefined') {
+    if (Array.isArray(list)) {
+      result = list;
+      if (result.length > 0) {
+        const findIndexValue = list.findIndex(listItem => listItem.id === value);
+        if (findIndexValue > -1) {
+          result.splice(findIndexValue, 1);
+        }
+      }
+    }
+  }
+  return result;
+}
