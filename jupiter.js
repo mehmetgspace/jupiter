@@ -1,4 +1,8 @@
-// isNullOrEmpty
+/**
+ * Check if value is empty
+ * @param value
+ * @returns {boolean}
+ */
 function isNullOrEmpty(value) {
   var status = false;
   if (value === null || value === '') {
@@ -7,7 +11,12 @@ function isNullOrEmpty(value) {
   return status;
 }
 
-// findItemInArray
+/**
+ * Find specific item in an array
+ * @param value
+ * @param list
+ * @returns {null}
+ */
 function findItemInArray(value, list) {
   var index = list.map(function(item) {
     return item;
@@ -21,7 +30,13 @@ function findItemInArray(value, list) {
   return result;
 }
 
-// findItemInArrayByKey
+/**
+ * Find specific item in an array for object
+ * @param value
+ * @param key
+ * @param list
+ * @returns {null}
+ */
 function findItemInArrayByKey(value, key, list) {
   var index = list.map(function(item) {
     return item[key];
@@ -35,7 +50,12 @@ function findItemInArrayByKey(value, key, list) {
   return result;
 }
 
-// areObjectsEqual
+/**
+ * Check if objects are equal
+ * @param obj1
+ * @param obj2
+ * @returns {boolean}
+ */
 function areObjectsEqual(obj1, obj2) {
   var result = null;
 
@@ -48,7 +68,12 @@ function areObjectsEqual(obj1, obj2) {
   return result;
 }
 
-// removeItemFromArray
+/**
+ * Remove specific item an array
+ * @param userItem
+ * @param list
+ * @returns {*[]}
+ */
 function removeItemFromArray(userItem, list) {
   let result = [];
   if (typeof list !== 'undefined') {
@@ -62,7 +87,13 @@ function removeItemFromArray(userItem, list) {
   return result;
 }
 
-// removeItemFromArrayByKey
+/**
+ * Remove specific item in an array for object
+ * @param value
+ * @param key
+ * @param list
+ * @returns {*[]}
+ */
 function removeItemFromArrayByKey(value, key, list) {
   let result = [];
   if (typeof list !== 'undefined') {
