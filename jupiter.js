@@ -109,3 +109,34 @@ function removeItemFromArrayByKey(value, key, list) {
   }
   return result;
 }
+
+/**
+ * Calculate total price for products with quantity
+ * @param products
+ * @returns {*|number}
+ */
+function calculateTotalPriceWithQuantity(products) {
+  // create a variable for result value
+  let totalPrice = 0;
+
+  // Check undefined
+  if (typeof products !== 'undefined') {
+
+    // Check is array
+    if (Array.isArray(products)) {
+
+      // create an initial value for reduce
+      const initialValue = 0;
+
+      // calculate the price
+      totalPrice = products
+        .map(product => product['price'] * product['quantity'])
+        .reduce((prev, current) => prev + current, initialValue);
+
+    }
+
+  }
+
+  // return the result value
+  return totalPrice;
+}
