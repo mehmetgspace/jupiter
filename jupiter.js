@@ -140,3 +140,48 @@ function calculateTotalPriceWithQuantity(products) {
   // return the result value
   return totalPrice;
 }
+
+/**
+ * Get query string values as an object
+ * @returns {{}}
+ */
+function getQueryStringValues() {
+  // create an object for result value
+  let customObj = {};
+
+  // get full value
+  const fullText = window.location.search;
+
+  // check the value has question mark
+  const hasQuestionMark = /[?]/.test(fullText);
+
+  if (hasQuestionMark) {
+    // remove question mark
+    const questionMarkRemovedArr = fullText.split('?')[1];
+
+    // create a new array with all params
+    const allParams = questionMarkRemovedArr.split('&');
+
+    // check for array
+    if (Array.isArray(allParams)) {
+      // check has item in array
+      if (allParams.length > 0) {
+        // check every item
+        allParams.forEach(item => {
+          // empty control
+          if (item !== '' || item) {
+            // get key
+            const customKey = item.split('=')[0];
+            // get value
+            const customValue = item.split('=')[1];
+            // set key and value to new object
+            customObj[customKey] = customValue;
+          }
+        });
+      }
+    }
+  }
+
+  // return the result as an object
+  return customObj;
+}

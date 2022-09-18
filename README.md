@@ -23,3 +23,6 @@ Remove specific item in an array for object
 
 ### calculateTotalPriceWithQuantity
 Calculate total price for products with quantity
+
+### getQueryStringValues
+Get query string values as an object
