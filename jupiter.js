@@ -185,3 +185,31 @@ function getQueryStringValues() {
   // return the result as an object
   return customObj;
 }
+
+/**
+ * Convert array to string with comma
+ * @param list
+ * @param char
+ * @returns {string}
+ */
+function convertArrayToStringWithComma(list, char) {
+  // create a variable for result value
+  let customValue = '';
+
+  // check undefined
+  if (typeof list !== 'undefined') {
+    // check array is valid
+    if (Array.isArray(list)) {
+      // iteration with list
+      list.forEach((item, index) => {
+        // set value
+        customValue += item;
+        // add special character based last item
+        list.length - 1 !== index ? customValue += `${char} ` : ''
+      });
+    }
+  }
+
+  // return the result value
+  return customValue;
+}

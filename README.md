@@ -26,3 +26,6 @@ Calculate total price for products with quantity
 
 ### getQueryStringValues
 Get query string values as an object
+
+### convertArrayToStringWithComma
+Convert array to string with special character
