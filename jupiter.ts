@@ -53,3 +53,19 @@ function findItemInArrayByKey(value: string, key: string, list: any): any {
   // return the result value
   return result;
 }
+
+/**
+ * Check if objects are equal
+ * @param obj1
+ * @param obj2
+ */
+function areObjectsEqual(obj1: {}, obj2: {}) {
+  // create a variable for result value
+  let status = false;
+
+  // equal control
+  status = JSON.stringify(obj1) === JSON.stringify(obj2);
+
+  // return the result value
+  return status;
+}
