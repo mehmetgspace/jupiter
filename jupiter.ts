@@ -31,3 +31,25 @@ function findItemInArray(value: string, list: any[]): any {
   // return the result value
   return result;
 }
+
+/**
+ * Find specific item in an array for object
+ * @param value
+ * @param key
+ * @param list
+ */
+function findItemInArrayByKey(value: string, key: string, list: any): any {
+  // find index value in the array
+  const index = list
+    .map((item: any) => {
+      return item[key];
+    })
+    .indexOf(value);
+
+  // set result if index is valid
+  let result = null;
+  if (index !== -1) result = list[index];
+
+  // return the result value
+  return result;
+}
